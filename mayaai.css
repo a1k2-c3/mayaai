@@ -1,0 +1,846 @@
+
+.parent{
+    width: 100%;
+    height: 550svh;
+}
+.intr1{
+    width: 100%;
+    height: 100svh;
+    /* background-color: red; */
+    position: relative;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    height: 12%;
+    background-color: #FFFFFF;
+    top: 0;
+    z-index: 99999;
+}
+.logo{
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    left: 3%;
+    top: 15%;
+    background-image: url("../Day-8/logo-dark.png");
+    background-size: 100% 100%;
+}
+.selector{
+    position: absolute;
+    width: 400px;
+    height: fit-content;
+    /* border: 1px solid yellow; */
+    left: 20%;
+    top: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+.button{
+    cursor: pointer;
+    width: fit-content;
+    height: 100%;
+    font-size: 19px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.button:hover{
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+
+}
+.logout{
+    width: 10%;
+    height: 80%;
+    position: absolute;
+    right: 2%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10%;
+    border-radius: 8px;
+    color: #f2f2f3;
+    background-color: green;
+    z-index: 999;
+    transition: all 1s;
+    overflow: hidden;
+}
+.logout:hover {
+    /* background-color: #0d0d15; */
+    color: green;
+}
+
+.logout::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f3;
+    position: absolute;
+    right: 500px;
+    transition: all 1s;
+    border-radius: 8px;
+}
+.logout:hover::before{
+    right: 0;
+    z-index: -999;
+}
+@media screen and (max-width:1093px) {
+    .selector{
+        display: none;
+    }
+}
+.obody{
+    width: 100%;
+    height: 88%;
+    background-color: #EAF0F2;
+    position: absolute;
+    bottom: 0%;
+}
+.img1{
+    width: 200px;
+    height: 200px;
+    background-image: url("../Day-8/shape-13.png");
+    background-size: 100% 100%;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    /* display: none; */
+    transition: all 1s;
+    animation-name: img1a;
+    animation-duration: 1s;
+}
+@keyframes img1a {
+    0%{
+        display: none;
+    }
+    100%{
+        display: inline-block;
+    }
+}
+.img1:hover,.img7:hover,.l2:hover{
+    transform: translate(50%);
+}
+.img2{
+    width: 50%;
+    height: 100%;
+    background-image: url("../Day-8/banner-title.png");
+    background-size: 100% 100%;
+    animation-name: img2a;
+    animation-duration: 2s;
+    position: absolute;
+    /* animation-iteration-count: infinite; */
+}
+@keyframes img2a {
+    0%{
+        bottom: -1000px;
+    }
+    100%{
+        bottom: 0%;
+    }
+}
+.img3{
+    width: 120px;
+    height: 50px;
+    background-image: url("../Day-8/shape-15.png");
+    background-size: 100% 100%;
+    position: absolute;
+    right:35% ;
+    top: 24%;
+    animation-name: img3a;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes img3a {
+    0%{
+        right: 35%;
+    }
+    50%{
+        right: 25%;
+    }
+    100%{
+        right: 35%;
+    }
+}
+.img4{
+    width: 50%;
+    height:100%;
+    background-image: url("../Day-8/thub-girl-1.png");
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    animation-name: img4a;
+    animation-duration: 4s;
+}
+@keyframes img4a {
+    0%{
+        right: -1000px;
+    }
+    100%{
+        right: 0;
+    }
+}
+.img9{
+    width: 50px;
+    height: 100px;
+    background-image: url("https://maya.technicalhub.io/assets/images/about/h-1-shape-01.png");
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    top: 15%;
+}
+.img5{
+    width: 200px;
+    height: 200px;
+    background-image: url("../Day-8/shape-13.png");
+    background-size: 100% 100%;
+    position: absolute;
+    right: 6%;
+    bottom: 8%;
+    transition: all 1s;
+    z-index: 0;
+}
+.img5:hover{
+    transform: translate(-20%);
+}
+.img6{
+    width: 150px;
+    height: 150px;
+    background-image: url("../Day-8/shape-02.png");
+    background-size: 100% 100%;
+    position: absolute;
+    right:  16%;
+    top: 36%;
+    transition: all 1s;
+}
+.img7{
+    width: 70px;
+    height: 70px;
+    background-image: url("https://maya.technicalhub.io/assets/images/about/shape-18.png");
+    background-size: 100% 100%;
+    position: absolute;
+    right:  4%;
+    top:   72%;
+    transition: all 1s;
+}
+.img8{
+    width: 70%;
+    height: 25%;
+    background-image: url("../Day-8/img8.png");
+    background-size: 100% 100%;
+    position: absolute;
+    bottom:   10%;
+    transition: all 1s;
+    z-index: 999;
+    border-radius: 8px;
+    animation-name: img8a;
+    animation-duration: 6s;
+}
+@keyframes img8a {
+    0%{
+        bottom: -1000px;
+    }
+    100%{
+        bottom: 5%;
+    }
+}
+.center{
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-35%);
+    z-index:1;
+    overflow: hidden;
+    /* background-color: red; */
+}
+@media screen and (max-width:1000px) {
+    .center{
+        width: 100%;
+        height: 70%;
+    }
+    .img2,.img4{
+        width: 50%;
+        height: 100%;
+    }
+}
+/* @media screen and (max-width:1097px) {
+    .center{
+        width: 40%;
+        height: 40%;
+    }
+} */
+@media screen and (max-width:1400px) {
+    .img1,.img3,.img5,.img6,.img7,.img9{
+        display: none;
+    }
+}
+.intr2{
+    width: 100%;
+    height: 100svh;
+    position: relative;
+}
+.bg{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 0%;
+    background: linear-gradient(to right,#2C9B29,#6DBB20);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.courses{
+    width: 250px;
+    height: 120px;
+    /* background-color: red; */
+    border-right: 1.5px solid #EAF0F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#c1{
+    border: none;
+}
+.cor{
+    font-size: 30px;
+    left: 8%;
+    color:#FFFFFF ;
+}
+.hun{
+    font-size: 28px;
+    position: relative;
+    left: 6%;
+    bottom: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hun1{
+    font-size: 25px;
+    position: relative;
+    right: 50px;
+    top: 18%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#c1{
+    border: none;
+}
+#c2{
+    font-size: 50px;
+}
+@media screen and (max-width:1000px) {
+    .bg{
+        height: 40%;
+    }
+    .courses{
+        border: none;
+    }
+}
+@media screen and (max-width:516px) {
+    .bg{
+        height: 80%;
+    }
+}
+.theader{
+    width: 300px;
+    height: 100px;
+    background-image: url("../Day-8/theader.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 32%;
+    left: 40%;
+}
+.tcat{
+    width: 80%;
+    height: fit-content;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+@media screen and (max-width:1216px) {
+    .theader{
+        display: none;
+    }
+    .tcat{
+        bottom: -120px;
+    }
+}
+@media screen and (max-width:1004px) {
+    .theader{
+        display: none;
+    }
+    .tcat{
+        bottom: -250px;
+    }
+}
+@media screen and (max-width:817px) {
+    .theader{
+        display: none;
+    }
+    .tcat{
+        bottom: -720px;
+    }
+}
+@media screen and (max-width:518px) {
+    .theader{
+        display: none;
+    }
+    .tcat{
+        bottom: -950px;
+    }
+}
+.cat{
+    width: 300px;
+    height: 100px;
+    /* background-color: violet; */
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.symbol{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-image: url("../Day-8/technology.png");
+    background-size: 100% 100%;
+}
+.tname{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#ca2{
+    background-image: url("../Day-8/certification.png");
+}
+#ca3{
+    background-image: url("../Day-8/apt-logic.png");
+}
+#ca4{
+    background-image: url("../Day-8/communication.png");
+}
+#ca5{
+    background-image: url("../Day-8/profile.png");
+}
+#ca6{
+    background-image: url("../Day-8/placements.png");
+}
+#ca7{
+    background-image: url("../Day-8/certification.png");
+}
+#ca8{
+    background-image: url("../Day-8/internsip.png");
+}
+#ca9{
+    background-image: url("../Day-8/projectspace.png");
+}
+#cat1{
+    background-color: rgb(211, 238, 211);
+}
+#cat2{
+    background-color: rgb(204, 232, 241);
+}
+#cat3{
+    background-color: rgb(211, 238, 211);
+}
+#cat4{
+    background-color: rgb(241, 226, 193);
+}
+#cat5{
+    background-color: rgb(237, 158, 237);
+}
+#cat6{
+    background-color: rgb(249, 198, 249);
+}
+#cat7{
+    background-color: rgb(204, 232, 241);
+}
+#cat8{
+    background-color: rgb(241, 226, 193);
+}
+#cat9{
+    background-color: rgb(195, 232, 247);
+}
+#cat1:hover{
+    background-color: #20B8A0;
+    color: white;
+}
+#cat2:hover{
+    background-color: #EE4A62;
+    color: white;
+}
+#cat3:hover{
+    background-color: #0ECD73;
+    color: white;
+}
+#cat4:hover{
+    background-color: #F8B81F;
+    color: white;
+}
+#cat5:hover{
+    background-color: #8E56FF;
+    color: white;
+}
+#cat6:hover{
+    background-color: #F92596;
+    color: white;
+}
+#cat7:hover{
+    background-color: #5866EB;
+    color: white;
+}
+#cat8:hover{
+    background-color: #F8941F;
+    color: white;
+}
+#cat9:hover{
+    background-color: #39C0FA;
+    color: white;
+}
+.intr3{
+    width: 100%;
+    height: 100svh;
+    position: relative;
+}
+.tmain{
+    width: 80%;
+    height: 100%;
+    /* background-color: red; */
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.ldiv{
+    width: 550px;
+    height: 660px;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    position: relative;
+}
+.l1{
+    /* position: absolute; */
+    width: 500px;
+    height: 660px;
+    background-image: url("../Day-8/about-02.png");
+    background-size: 100% 100%;
+    z-index: 99;
+}
+.l2{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-image: url("../Day-8/shape-37.png");
+    background-size: 100% 100%;
+    top: -1%;
+    left: -8%;
+    transition: all 1s;
+    animation-name: img1a;
+    animation-duration: 1s;
+}
+.l3{
+    width: 150px;
+    height: 150px;
+    background-image: url("../Day-8/shape-13.png");
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: -5%;
+    right: -10%;
+    transition: all 1s;
+}
+.l3:hover{
+    transform: translate(-20%);
+}
+.l4{
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    border-radius: 5px;
+    background-image: url("../Day-8/cer.png");
+    background-size: 100% 100%;
+    top: 8%;
+    right: 1%;
+    z-index: 999;
+}
+.d1,.d2,.d3,.d4,.d5,.d6,.d7{
+    position: absolute;
+    top: 10%;
+    font-size: 20px;
+    left: 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.d2{
+    top: 18%;
+    font-size: 50px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.d3{
+    top: 28%;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.d4{
+    top: 44%;
+    font-size: 19px;
+    text-align: justify;
+    color: rgb(61, 61, 61);
+    font-family: 'Times New Roman', Times, serif;
+}
+.det{
+    color: #1d7421;
+}
+.d5{
+    top:70%;
+    font-family: fantasy;
+}
+.d6{
+    top: 75%;
+    font-family: fantasy;
+}
+.d7{
+    top: 80%;
+    font-family: fantasy;
+}
+@media screen and(max-width:1015px) {
+    .tmain{
+        top: 90%;
+        height: fit-content;
+    }
+}
+@media screen and(max-width:817px) {
+    .tmain{
+        top: 120%;
+    }
+}
+.intr4{
+    width: 100%;
+    height: 100svh;
+    background-color: #F0F4F5;
+    position: relative;
+    top: 7%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.fh{
+    position: absolute;
+    font-size: 20px;
+    color: #504d4d;
+    top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fh2{
+    position: absolute;
+    font-size: 50px;
+    top: 10%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.fcards{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 30%;
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.ca1{
+    width: 250px;
+    height: 347px;
+    /* background-color: blue; */
+    border-radius: 10px;
+    margin: 1px;
+    background-image: url("../Day-8/ca1.png");
+    background-size: 100% 100%;
+    box-shadow: 10px 10px 4px rgb(78, 78, 78);
+}
+#car2{
+    background-image: url("../Day-8/ca2.png");
+}
+#car3{
+    background-image: url("../Day-8/ca3.png");
+}
+#car4{
+    background-image: url("../Day-8/ca4.png");
+}
+.ca1:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 10px 10px 4px rgb(51, 79, 51);
+}
+.fbutton{
+    position: absolute;
+    bottom: 5%;
+    width: 200px;
+    height: 50px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    border-radius: 10px;
+}
+.fbutton:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+@media screen and (max-width:1441px) {
+    .intr4{
+        top: 20%;
+    }
+}
+@media screen and (max-width:1277px) {
+    .fbutton{
+        display: none;
+    }
+}
+.intr6{
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    background-image: url("../Day-8/intr5.png");
+    background-size: 100% 100%;
+    top: 8%;
+}
+.intr7{
+    position: relative;
+    width: 100%;
+    height: 50svh;
+    background-image: url("../Day-8/intr7.png");
+    background-size: 100% 100%;
+    top: 7%;
+}
+@media screen and (max-width:1441px) {
+    .intr6{
+        top: 25%;
+    }
+}
+@media screen and (max-width:1277px) {
+    .intr6{
+        top: 25%;
+    }
+    .intr7{
+        top: 20%;
+    }
+}
+.more{
+    position: fixed;
+    right:5%;
+    top: 5%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+@media screen and (max-width:1093px) {
+    .selector{
+        display: none;
+    }
+    .more{
+        cursor: pointer;
+        display: block;
+    }
+    .logout{
+        right: 15%;
+    }
+}
+.moreo{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    left: 0;
+    top: 13%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    animation-name: moreoa;
+    animation-duration: 1s;
+    display: none;
+}
+.moreoo{
+    width: 100%;
+    height: 30%;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 1px solid grey;
+    color: #2C9B29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#m1{
+    border: none;
+}
+.moreoo:hover{
+    background-color: #2C9B29;
+    color: #EAF0F2;
+}
+@keyframes moreoa {
+    0%{
+        left: -500px;
+    }
+    100%{
+        left: 0;
+    }
+}
+.more:hover>.moreo{
+    display: block;
+}
+.color{
+    position: fixed;
+    width: 35px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: white;
+    right: 3%;
+    top: 43%;
+}
+.color:hover{
+    background-color: #020B17;
+}
+.color::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    border-radius: 50px;
+    background-image: url("../Day-8/aisun.png");
+    background-size: 100% 90%;
+    right: -6px;
+    transition: all 1s;
+}
+.color:hover::before{
+    top: 70%;
+    background-image: url("../Day-8/aimoon.png");
+    background-size: 100%  100%;
+
+}
+.btop{
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    font-size: 30px;
+    transition: all 1s;
+}
